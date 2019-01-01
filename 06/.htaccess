@@ -1,0 +1,8 @@
+DirectoryIndex error.xxx
+
+# Mật khẩu cho thư mục
+AuthName "06"
+AuthType Basic
+#Lưu ý khi ở localhost thì đường dẫn đến file password config phải là tuyệt đối
+AuthUserFile D:\xampp_7\htdocs\learn-htaccess\06\.htpasswd  
+require valid-user

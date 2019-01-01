@@ -1,0 +1,12 @@
+#Không cho phép truy cập để view
+DirectoryIndex error.html
+Options -Indexes
+
+#Cho phép truy cập để view
+Options +Indexes
+
+#Cho phép view nhưng bỏ qua tất cả thư mục và file
+# IndexIgnore *
+
+#Cho phép view nhưng bỏ qua tất cả các file php
+IndexIgnore *.php

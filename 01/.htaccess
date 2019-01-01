@@ -1,0 +1,21 @@
+# ------------Cấm truy cập từ tất cả các IP------------
+#Deny from all
+
+# ------------Cấm truy cập từ 1 IP cụ thể------------Chạy trên host mới thấy được
+#Deny from 192.168.1.11      
+
+# ------------Cấm truy cập từ dãy IP cụ thể------------
+#Deny from 192.168.1
+
+# ------------Cho phép truy cập từ tất cả các IP------------
+#Allow from all
+
+# ------------Cho phép truy cập từ tất cả các IP ngoại trừ 192.168.1.115------------
+# Allow from all
+# Deny from 192.168.1.115  
+
+# ------------Order deny, allow------------  Thứ tự thực hiện sẽ là thực hiện deny trước sau đó mới đến allow
+# Order deny, allow
+# Allow from 192.168.1    
+# Deny from 192.168.1.115  
+

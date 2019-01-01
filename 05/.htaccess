@@ -1,0 +1,11 @@
+DirectoryIndex error.xxx
+
+# Không cho phép truy cập vào file test.php
+# <Files "test.php">
+#     deny from all
+# </Files>
+
+# Không cho phép truy cập vào file *.html
+<Files "*.html">
+    deny from all
+</Files>

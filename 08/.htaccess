@@ -1,0 +1,49 @@
+DirectoryIndex error.xxx
+# Rewrite URL
+
+Options +FollowSymLinks
+RewriteEngine On 
+
+# 01 RewriteRule Pattern Destination
+# RewriteRule (.*)\.html abc.html
+
+# Chuyển tất cả các yêu cầu html về trang info.php
+# RewriteRule (.*)\.html info.php
+
+# Chuyển tất cả các yêu cầu html về trang php tương ứng
+# RewriteRule (.*)\.html $1\.php
+
+# [L] Last rule: kí tự này ấn định bước trước đã xong thì ngừng và ko tiếp tục thực thi lệnh rewrite tiếp theo nữa
+# [N] Next: chỉ thị cho server tiếp tục rewrite cho đến khi tất cả các mục chỉ định được write hoàn toàn
+# [NC] No-case: Chỉ định server match nhưng kí tự tương tự nhau (không phân biệt hoa thường)
+
+# Chuyển tất cả các request về trang index.html
+# RewriteRule ^(.*)$ index.html
+
+# URL thân thiện
+# RewriteRule dang-nhap.html login.html
+
+# URL thân thiện     info.php?category=the-thao&id=5  =>  thong-tin/the-thao/5
+# RewriteRule thong-tin/([A-Za-z0-9-]+)/([0-9]+)\.html info.php?category=$1&id=$2
+
+# RewriteCond STRING CONDITION     
+# RewriteCond %{SERVER_PORT} 7777
+# RewriteRule ^(.*)$ result.php 
+
+# -d Kiểm tra thư mục có tồn tại hay không?
+# -f Kiểm tra file có tồn tại hay không?
+# -s Kiểm tra giá trị của file có khác 0 hay không?
+
+# Thư mục không tồn tại thì chuyển về trang abc.html hết 
+# RewriteCond %{REQUEST_FILENAME} -d
+# RewriteRule ^.*$ abc.html
+
+# File có tồn tại thì chuyển về trang result hết 
+# RewriteCond %{REQUEST_FILENAME} -f  
+# RewriteRule ^.*$ result.php 
+
+# File không có tồn tại thì chuyển về trang info hết 
+# RewriteCond %{REQUEST_FILENAME} !-f  
+# RewriteRule ^.*$ info.php 
+
+
